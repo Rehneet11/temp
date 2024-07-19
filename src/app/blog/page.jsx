@@ -5,7 +5,7 @@ import { getPosts } from "@/lib/data";
 // FETCH DATA WITH AN API
 const URL=process.env.BASE_URL;
 const getData = async () => {
-  const res = await fetch(`${URL}/api/blog`, {next:{revalidate:3600}});
+  const res = await fetch(`${URL}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");

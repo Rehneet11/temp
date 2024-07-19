@@ -8,7 +8,7 @@ import { getPost } from "@/lib/data";
 const URL=process.env.BASE_URL;
 
 const getData = async (slug) => {
-  const res = await fetch(`${URL}/api/blog/${slug}`);
+  const res = await fetch(`${URL}/${slug}`);
   console.log(res);
   if (!res.ok) {
     throw new Error("Something went wrong");
